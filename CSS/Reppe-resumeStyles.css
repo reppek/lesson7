@@ -1,0 +1,234 @@
+/*
+WEB 210 Intro
+Katherine Reppe
+9.12.19
+*/
+
+/* Color Palette 
+#2B2D42 - dark blue
+#8D99AE - lt blue
+#EDF2F4 - blue/white
+#EF233C - red
+-- New colors added after revision
+#264d73 - grey blue
+#f2f2f2 - grey white
+#e6f2ff - light blue
+*/
+
+/* Global Styles */
+/* apply a natural box layout model to all elements*/
+
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	font-family: 'Crimson Pro', serif;
+/* old body style - font-family: 'Open Sans', sans-serif; */
+	font-size: 20px;
+	margin: 0;
+	background: #E3CAA1;
+} 
+h1, h2 {
+	font-family: 'Courgette', cursive;
+	font-weight: 400;
+}
+h1 	{
+	font-size: 65px;
+}
+
+h2 { 
+	font-size: 35px;
+	margin-top: 0;
+}
+h3 {
+	margin: 0;
+}
+.tagline {
+	text-shadow: 1.5px 1.5px black;
+}
+
+a { 
+	color:#EF233C;
+}
+a:hover {
+	text-decoration: none;
+}
+
+.content-wrap {
+	max-width: 950px;
+	margin: 0 auto;
+	padding: 60px 50px;
+	overflow: auto;
+}
+/*.col-narrow {
+	width: 30%;
+	float: left;
+}
+.col-wide {
+	width: 70%;
+	float: left;
+	padding-left: 30px;
+}*/
+.uppercase {
+	text-transform: uppercase;
+}
+.btn {
+	text-decoration: none;
+	background: #EF233C;
+	color: white;
+	padding: 10px;
+	display: inline-block;
+}
+
+/* Header and Footer */
+header, footer {
+	background: #264d73;
+	color: #f2f2f2;
+}
+
+/* Header Style */
+header {
+	padding-top: 50px;
+	position: relative;
+}
+.profile-img {
+	border-radius: 50%;
+}
+header h1, header h2 {
+	color: #f2f2f2;
+	margin: 0;
+}
+.download {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/* Footer Style */
+footer {
+	text-align: center;
+	font-size: 22px;
+}
+.contact-info a {
+	padding: 10px;
+}
+
+/* Navigation */
+nav {
+	text-align: center;
+	background: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+nav a {
+	display: inline-block;
+	padding: 15px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+/* Work Experience  */
+.work {
+	background: #e6f2ff;
+}
+h3 ~ p {
+	margin: 0;
+}
+.job-descrip {
+	margin-bottom: 25 px;
+}
+.job-descrip p:first-of-type {
+	margin-top: 0;
+}
+
+}
+
+/* Education */
+.education {
+	background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)), 
+	url(../images/beach.jpg) no-repeat fixed;
+	background-size: cover;
+}
+p + h3 {
+	margin-top: 30px;
+}
+
+/*Media Queries */
+@media (min-width: 900px) {
+	.col-narrow {
+	width: 30%;
+	float: left;
+	}
+	.col-wide {
+	width: 70%;
+	float: left;
+	padding-left: 20px;
+	}
+}
+
+@media (max-width: 899px) {
+	header {
+		text-align: center;
+	}
+	.profile-img {
+		width: 200px;
+	}
+}
+	
+#navbar {
+	width: 100%;
+	background: #f2f2f2;
+}
+
+/* unordered list */
+ul {                                   
+	text-align: center;                    
+	list-style: none;                   
+	color:#EF233C;
+}
+
+/* list items */
+ul li {                                 
+	font: bold 18px 'open-sans' sans-serif; 
+	display: inline-block;           
+	position: relative;                
+	padding: 15px 20px;           
+	background: #f2f2f2;              
+	cursor: pointer;                 
+}
+
+ul li:hover {                        
+	background: #264d73;             
+	color: #f2f2f2;                        
+}
+
+/* submenu */
+ul li ul {                          
+	padding: 0;                       
+	position: absolute;             
+	top: 48px;                       
+	left: -10000px;                 
+	width: 150px;                  
+}
+
+/*nested list */
+ul li ul li {                        
+	background: #264d73;          
+	display: block;                 
+	color: #f2f2f2;          
+}
+
+ul li ul li:hover { 
+	background: #666; 
+} 
+
+/*hover */
+ul li:hover ul {                
+	display: block;                
+	left :0px;                        
+}
